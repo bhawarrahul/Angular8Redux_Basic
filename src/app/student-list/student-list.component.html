@@ -1,0 +1,15 @@
+<table class="table table-hover" *ngIf="student != 0">
+    <thead>
+    <tr>
+        <td>Student Id</td>
+        <td>Student Name</td>
+        <td>Student Address</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of student | async">
+            <td>{{ stud.id }}</td>
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.address }}</td>
+        </tr>
+    </tbody>
