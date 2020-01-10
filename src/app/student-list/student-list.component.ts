@@ -12,6 +12,7 @@ import { Store } from '@ngrx/store';
 export class StudentListComponent implements OnInit {
 
   student: Observable<Student[]>;
+  displayedColumns: String[] = ['id', 'name', 'address'];
   constructor(private store: Store<StudentAppState>) {
     this.student = this.store.select(state => state.student);
    }
